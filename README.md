@@ -4,21 +4,19 @@ This is a NextJS project that is implementation of the game.
 
 ## Getting Started
 
-Install dependencies:
+1. Clone the repositiory
+2. Install dependencies:
 ```console
 npm install
 ```
-
-Run project:
+3. Run project:
 ```console
 npm run dev
 ```
 
-
-
 ## POST /api/board
 
-This request will create a new board (and replace the old one). an example request body should specify the size and live cell in this way:
+This request will create a new board (and replace the old one). The request body should specify the size and live cell in this way:
 
 ```json
 {
@@ -36,11 +34,11 @@ This request will create a new board (and replace the old one). an example reque
 
 ## GET /api/board
 
-This route will retreive the current state of the board. If a generations parameter is passed in the request query (api/board?generations=2), thi API will retrive a simulation of the game x generations forward withoud changing the state.
+This route will retreive the current (latest) state of the board. If a ```generations``` parameter is passed in the request query (```api/board?generations=<number of generations back>```), this API will retrive a simulation of the game x generations forward withoud changing the state.
 
 ## PUT /api/board
 
-This route will progress one generation to the future and return the board.
+This route will progress one generation to the future and return the latest board.
 
 ## DELETE /api/board
 
