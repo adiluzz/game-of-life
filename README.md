@@ -7,11 +7,13 @@ This an implementation of the game, using NextJS as the backend.
 1. Clone the repositiory
 
 2. Install dependencies:
+
 ```console
 npm install
 ```
 
 3. Run project:
+
 ```console
 npm run dev
 ```
