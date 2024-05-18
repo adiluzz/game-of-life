@@ -3,16 +3,14 @@ import { Cell } from "./Board.interface";
 
 export default class BoardSingleton {
 	size: number;
-	liveCells: Cell[];
 	states: Cell[][] = [];
 	constructor(size: number, liveCells: Cell[]) {
 		this.size = size;
 		this.validateBoardState(liveCells);
-		this.liveCells = liveCells;
 		this.states.push(liveCells);
 	}
 
-	private validateBoardState(state:Cell[]) {
+	private validateBoardState(state: Cell[]) {
 		for (let i = 0; i < state.length; i++) {
 			const cell = state[i];
 			if (cell.x > this.size - 1 || cell.y > this.size - 1) {
@@ -21,7 +19,7 @@ export default class BoardSingleton {
 		}
 	}
 
-	public progressBoard() {
+	public progressBoard(save?: boolean): Cell[] {
 		let liveCells: Cell[] = [];
 		const board = [...Array(this.size).fill(Array(this.size).fill(false))];
 		const currentState = this.getState();
@@ -54,14 +52,17 @@ export default class BoardSingleton {
 			}
 		}
 		this.validateBoardState(liveCells);
-		this.states.push(liveCells);
+		if (save) {
+			this.states.push(liveCells);
+		}
+		return liveCells;
 	}
 
 	public getState(stepsBack?: number) {
 		return !stepsBack ? this.states[this.states.length - 1] : this.states[this.states.length - stepsBack - 1];
 	}
 
-	public reverseSteps(steps:number) {
+	public reverseSteps(steps: number) {
 		this.states.splice(steps * -1);
 	}
 }

@@ -13,22 +13,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Cell[]
 		} catch (error) {
 			return res.status(400).end(error);
 		}
-	} 
-	
+	}
+
 	if (!currentBoard) {
 		return res.status(400).end('No current board');
 	}
 
 	if (req.method === 'GET') {
-		let returnBoard: BoardSingleton = new BoardSingleton(currentBoard.size, currentBoard.liveCells);
+		let returnData: Cell[];
 		for (let i = 0; i < Number(req.query.generations); i++) {
-			returnBoard.progressBoard();
+			returnData = currentBoard.progressBoard();
 		}
-		return res.status(200).json(returnBoard.getState());
+		return res.status(200).json(currentBoard.getState());
 	}
 
 	if (req.method === 'PUT') {
-		currentBoard.progressBoard();
+		currentBoard.progressBoard(true);
 		return res.status(200).json(currentBoard.getState());
 	}
 
