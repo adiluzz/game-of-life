@@ -1,14 +1,16 @@
 # Conway's Game of Life
 
-This is a NextJS project that is implementation of the game.
+This an implementation of the game, using NextJS as the backend.
 
 ## Getting Started
 
 1. Clone the repositiory
+
 2. Install dependencies:
 ```console
 npm install
 ```
+
 3. Run project:
 ```console
 npm run dev
