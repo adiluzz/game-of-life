@@ -53,3 +53,29 @@ This route will delete x number of generations from the game state and return mt
     "steps": 1
 }
 ```
+
+## Important Note - Room for improvemnet
+
+Currently, the algorithm that gets neighbouring cells (BoardSinglton.progressBoard) iterates every live cell for every cell on the board (O(N^2)). This can be improved by hash mapping the live cells to a data structure that can look something like that:
+
+```json
+{
+	"0":{
+		"1": true
+	},
+	"1":{
+		"1": true	
+	}
+}
+```
+
+In this example we have a nested object where the first level as the X value off a cell and the second level as the Y value. This will be equivalent to:
+
+```json
+[
+	{"x":0,"y":1},
+	{"x":1,"y":1}
+]
+```
+
+In this way we wouldn't have to iterate all live cells in order to get the neighbouring cells, we could calculate it.
