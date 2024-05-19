@@ -24,15 +24,15 @@ This request will create a new board (and replace the old one). The request body
 
 ```json
 {
-	"size": 5,
-	"liveCells": [
-		{ "x": 0, "y": 0 },
-		{ "x": 1, "y": 1 },
-		{ "x": 2, "y": 2 },
-		{ "x": 3, "y": 3 },
-		{ "x": 3, "y": 4 },
-		{ "x": 4, "y": 4 }
-	]
+  "size": 5,
+  "liveCells": [
+    { "x": 0, "y": 0 },
+    { "x": 1, "y": 1 },
+    { "x": 2, "y": 2 },
+    { "x": 3, "y": 3 },
+    { "x": 3, "y": 4 },
+    { "x": 4, "y": 4 }
+  ]
 }
 ```
 
@@ -50,7 +50,7 @@ This route will delete x number of generations from the game state and return mt
 
 ```json
 {
-	"steps": 1
+  "steps": 1
 }
 ```
 
@@ -60,12 +60,12 @@ Currently, the algorithm that gets neighbouring cells (BoardSinglton.progressBoa
 
 ```json
 {
-	"0": {
-		"1": true
-	},
-	"1": {
-		"1": true
-	}
+  "0": {
+    "1": true
+  },
+  "1": {
+    "1": true
+  }
 }
 ```
 
@@ -73,8 +73,8 @@ In this example we have a nested object where the first level as the X value off
 
 ```json
 [
-	{ "x": 0, "y": 1 },
-	{ "x": 1, "y": 1 }
+  { "x": 0, "y": 1 },
+  { "x": 1, "y": 1 }
 ]
 ```
 
