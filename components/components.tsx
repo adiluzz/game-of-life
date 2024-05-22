@@ -1,5 +1,12 @@
-import { Box, FormHelperText, Paper, lighten, styled } from "@mui/material";
+import { AppBar, Box, FormHelperText, Paper, lighten, styled } from "@mui/material";
 
+export const AppContainer = styled('div')({
+	marginTop: 80,
+});
+
+export const AppHeader = styled(AppBar)({
+	padding: 20,
+})
 
 export const ButtonsWrapper = styled(Box)({
 	display: 'flex',

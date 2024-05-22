@@ -1,8 +1,8 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import styles from '../styles/Home.module.css';
-import Head from 'next/head';
-import { AppBar } from '@mui/material';
 import { Typography } from '@mui/material';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import { AppContainer, AppHeader } from './components';
 
 export default function RootLayout(props) {
 	return (
@@ -15,10 +15,12 @@ export default function RootLayout(props) {
 				</Head>
 
 				<main>
-					<AppBar sx={{ padding: 3 }}>
+					<AppHeader position='fixed'>
 						<Typography>Game of Life</Typography>
-					</AppBar>
-					{props.children}
+					</AppHeader>
+					<AppContainer>
+						{props.children}
+					</AppContainer>
 				</main>
 			</AppRouterCacheProvider>
 		</div>
