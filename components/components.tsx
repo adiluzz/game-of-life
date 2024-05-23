@@ -27,7 +27,7 @@ export const ErrorWrapper = styled(FormHelperText)(({ theme }) => {
 
 
 export const CellComponent = styled(Paper)<{ alive: string }>(({ theme, alive }) => {
-	const backgroundColor = alive === 'true' ? lighten(theme.palette.success.light, 0.2) : lighten(theme.palette.error.light, 0.4)
+	const backgroundColor = alive === 'true' ? lighten(theme.palette.success.light, 0.2) : lighten(theme.palette.error.light, 0.5)
 	return {
 		display: 'inline-block',
 		backgroundColor,
@@ -40,7 +40,7 @@ export const CellComponent = styled(Paper)<{ alive: string }>(({ theme, alive })
 export const BoardWrapper = styled(Paper)({
 	padding: 10,
 	margin: 10,
-})
+});
 
 export const RowComponent = styled('div')({});
 
