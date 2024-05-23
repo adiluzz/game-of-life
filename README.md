@@ -20,12 +20,14 @@ npm run dev
 
 # Game progress
 
-Once the local server is running, browse to [The index page on localhost:3000](http://localhost:3000/). You will see that there is no active board. 
-Click on create new board and you will be redirected to the [Create Board Page /create](http://localhost:3000/create). Select the size of the board and the cells you want to to be alive at the beginning of the game (click on a selected cell will deselect it), and click on the "create" button.
-You will be redirected to the board page. 
-In this page, you will be able to simulate progress in this board without changing the board by clicking on the switch in the bottom of the page to trigger simulation mode, select the amount of generations to simulate and click on the simulation button. This will show another board of the simulation on the left side of the game board.
-In order to progress the board in 1 generation, click on the "Progress Board" button, this will advance the board. If you want to go backl a generation, click on the "Go Back" button. 
-The game saves all states back.
+- Once the local server is running, browse to [The index page on localhost:3000](http://localhost:3000/). 
+- You will see that there is no active board. 
+- Click on create new board and you will be redirected to the [Create Board Page /create](http://localhost:3000/create). 
+- Select the size of the board and the cells you want to to be alive at the beginning of the game (click on a selected cell will deselect it), and click on the "create" button.
+- You will be redirected back to [the board page](http://localhost:3000/). 
+- In this page, you will be able to simulate progress in this board without changing the board by clicking on the switch in the bottom of the page to trigger simulation mode, select the amount of generations to simulate and click on the simulation button. This will show another board of the simulation on the left side of the game board.
+- In order to progress the board in 1 generation, click on the "Progress Board" button, this will advance the board. If you want to go backl a generation, click on the "Go Back" button. 
+- The game saves all states back.
 
 # API documentation
 
