@@ -1,12 +1,12 @@
-import { Button, FormControl, FormHelperText, Input, Link, Switch, Typography } from '@mui/material';
+import { Button, Switch, Typography } from '@mui/material';
+import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 import Board from '../components/Board';
-import RootLayout from '../components/layout';
-import { BoardResponse, Cell } from './api/Board.interface';
-import axios from 'axios';
-import { defaultBoardSize } from '../utils/app.const';
-import { BoardsWrapper, ButtonsWrapper, ErrorWrapper, SimulateWrapper } from '../components/components';
 import BoardSimulation from '../components/BoardSimulation';
+import { BoardsWrapper, ButtonsWrapper, ErrorWrapper, SimulateWrapper } from '../components/components';
+import RootLayout from '../components/layout';
+import { defaultBoardSize } from '../utils/app.const';
+import { BoardResponse, Cell } from './api/Board.interface';
 
 export default function Home() {
 	const [board, setBoard] = useState<Cell[]>();
@@ -83,9 +83,7 @@ export default function Home() {
 						<Button onClick={progressBoard}>Progress Board</Button>
 					</>
 				}
-				<Button>
-					<Link href={'./create'}>Create new board</Link>
-				</Button>
+				<Button href='./create'>Create new board</Button>
 			</ButtonsWrapper>
 			{
 				board &&

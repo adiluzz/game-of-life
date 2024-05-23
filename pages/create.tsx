@@ -50,9 +50,7 @@ const Create: FC = () => {
 			onCellClick={onCellClicked}
 		/>
 		<ButtonsWrapper>
-			<Button>
-				<Link href='/'>Cancel</Link>
-			</Button>
+			<Button href='/'>Cancel</Button>
 			<Button
 				onClick={createNewBoard}
 			>Create</Button>

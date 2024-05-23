@@ -16,7 +16,6 @@ const BoardSimulation: FC<{ size: number }> = ({ size }) => {
 			setBoard(boardResponse.data.liveCells);
 			setError(undefined);
 		} catch (error) {
-			console.error(error);
 			setBoard(undefined);
 			setError(error.response.data);
 		}
